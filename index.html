@@ -4,125 +4,159 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lava Agora</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container">
-
-        <div id="login-section">
-           <img src="img/logo.png" class="img">
+    <div class="container my-5">
+        <div id="login-section" class="card mx-auto p-4 shadow-sm">
+            <img src="imagens/logo.png" class="img-fluid mx-auto d-block mb-3" alt="Logo Lava Agora">
             <form id="login-form">
-                <input type="email" id="email" placeholder="Email" required>
-                <input type="password" id="password" placeholder="Senha" required>
-                <button type="submit">Conectar-se</button>
+                <div class="mb-3">
+                    <input type="email" class="form-control" id="email" placeholder="Email" required>
+                </div>
+                <div class="mb-3">
+                    <input type="password" class="form-control" id="password" placeholder="Senha" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Conectar-se</button>
             </form>
-            <div class="social-login">
-                <button class="google-login">
-                    <img src="img/google-logo.png" class="img">
+            <div class="social-login mt-3">
+                <button class="btn btn-danger w-100 mb-2 google-login d-flex align-items-center justify-content-center">
+                    <img src="imagens/google-logo.png" class="img-fluid me-2" alt="Google Logo"> Login com Google
                 </button>
-                <button class="apple-login">
-                    <img src="img/apple-logo.png" class="img">
+                <button class="btn btn-dark w-100 apple-login d-flex align-items-center justify-content-center">
+                    <img src="imagens/apple-logo.png" class="img-fluid me-2" alt="Apple Logo"> Login com Apple
                 </button>
             </div>
             <a href="#" class="signup-link">Novo usuário? Inscreva-se</a>
         </div>
 
-        <div id="order-section" style="display: none;">
-            <h2>Monte seu cesto</h2>
-            <input type="text" id="search-preferences" placeholder="Procure pelas suas preferências">
-            <h3>Opção de lavagem</h3>
-            <div class="wash-options">
-                <button type="button" class="wash-option active">padrão</button>
-                <button type="button" class="wash-option">Lavagem intensa</button>
+        <div id="order-section" class="card mx-auto p-4 shadow-sm d-none">
+            <h2 class="text-primary">Monte seu cesto</h2>
+            <input type="text" id="search-preferences" class="form-control mb-3" placeholder="Procure pelas suas preferências">
+            <h3 class="text-secondary">Opção de lavagem</h3>
+            <div class="wash-options row row-cols-2 g-2 mb-3">
+                <div class="col">
+                    <button type="button" class="wash-option btn btn-outline-secondary w-100">Padrão</button>
+                </div>
+                <div class="col">
+                    <button type="button" class="wash-option btn btn-outline-secondary w-100">Lavagem intensa</button>
+                </div>
             </div>
-            <h3>Preferências</h3>
+            <h3 class="text-secondary">Preferências</h3>
             <div class="preferences">
-                <h4>Tipo de tecido</h4>
-                <div class="fabric-types">
-                    <button type="button" class="fabric-type active">Algodão</button>
-                    <button type="button" class="fabric-type">Seda</button>
-                    <button type="button" class="fabric-type">Lã</button>
-                    <button type="button" class="fabric-type">Sintético</button>
+                <h4 class="text-secondary">Tipo de tecido</h4>
+                <div class="fabric-types row row-cols-2 g-2 mb-3">
+                    <div class="col">
+                        <button type="button" class="fabric-type btn btn-outline-secondary w-100">Algodão</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="fabric-type btn btn-outline-secondary w-100">Seda</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="fabric-type btn btn-outline-secondary w-100">Lã</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="fabric-type btn btn-outline-secondary w-100">Sintético</button>
+                    </div>
                 </div>
-                <h4>Fragrância</h4>
-                <div class="fragrances">
-                    <button type="button" class="fragrance">Fraco</button>
-                    <button type="button" class="fragrance active">Lavanda</button>
-                    <button type="button" class="fragrance">Fresco</button>
-                    <button type="button" class="fragrance">Confort</button>
+                <h4 class="text-secondary">Fragrância</h4>
+                <div class="fragrances row row-cols-2 g-2 mb-3">
+                    <div class="col">
+                        <button type="button" class="fragrance btn btn-outline-secondary w-100">Fraco</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="fragrance btn btn-outline-secondary w-100">Lavanda</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="fragrance btn btn-outline-secondary w-100">Fresco</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="fragrance btn btn-outline-secondary w-100">Confort</button>
+                    </div>
                 </div>
             </div>
-            <h3>Requisitos</h3>
-            <div class="requirements">
-                <label><input type="checkbox" checked> Sem alvejante</label>
-                <label><input type="checkbox" checked> Produtos hipoalergênicos</label>
-                <label><input type="checkbox" checked> Secagem em máquina</label>
-                <label><input type="checkbox" checked> Secar em cabine</label>
-                <label><input type="checkbox" checked> Roupas delicadas</label>
+            <h3 class="text-secondary">Requisitos</h3>
+            <div class="requirements mb-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="noBleach" checked>
+                    <label class="form-check-label" for="noBleach">Sem alvejante</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="hypoallergenic" checked>
+                    <label class="form-check-label" for="hypoallergenic">Produtos hipoalergênicos</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="machineDrying" checked>
+                    <label class="form-check-label" for="machineDrying">Secagem em máquina</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="cabinDrying" checked>
+                    <label class="form-check-label" for="cabinDrying">Secar em cabine</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="delicateClothes" checked>
+                    <label class="form-check-label" for="delicateClothes">Roupas delicadas</label>
+                </div>
             </div>
-            <div class="order-actions">
-                <button type="button" onclick="showSummary()">Salvar</button>
-                <button type="button" onclick="showSummary()">Finalizar</button>
+            <div class="order-actions d-flex justify-content-around mt-3">
+                <button type="button" class="btn btn-outline-secondary" onclick="showSummary()">Salvar</button>
+                <button type="button" class="btn btn-primary" onclick="showSummary()">Finalizar</button>
             </div>
         </div>
 
-        <div id="summary-section" style="display: none;">
-            <button class="close-btn" onclick="closeSummary()">X</button>
-            <h2>Pronto, Davi!</h2>
-            <p class="success-message">Seu pedido foi finalizado com sucesso!</p>
+        <div id="summary-section" class="card mx-auto p-4 shadow-sm d-none">
+            <button class="close-btn btn btn-link" onclick="closeSummary()">X</button>
+            <h2 class="text-primary">Pronto, Davi!</h2>
+            <p class="success-message text-success">Seu pedido foi finalizado com sucesso!</p>
             <p>Prepare suas roupas!</p>
-            <p class="order-date">Quinta feira, 5 de maio</p>
-            <h3>SEU PEDIDO</h3>
-            <ul class="order-items">
-                <li>
+            <p class="order-date text-muted">Quinta feira, 5 de maio</p>
+            <h3 class="text-secondary">SEU PEDIDO</h3>
+            <ul class="order-items list-group list-group-flush">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
                     <span>Terno</span>
                     <span>R$ 35,00/cada</span>
                     <span>2 unid.</span>
                 </li>
-                <li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
                     <span>Camisas de algodão</span>
                     <span>R$ 12,00/cesto</span>
                     <span>3 unid.</span>
                 </li>
             </ul>
-            <div class="order-totals">
-                <div>
+            <div class="order-totals mt-3">
+                <div class="d-flex justify-content-between">
                     <span>Subtotal</span>
                     <span>R$ 112,00</span>
                 </div>
-                <div>
+                <div class="d-flex justify-content-between">
                     <span>Frete</span>
                     <span>R$ 5,00</span>
                 </div>
-                <div class="total">
+                <div class="total d-flex justify-content-between">
                     <span>Total</span>
                     <span>R$ 117,00</span>
                 </div>
             </div>
-            <button type="button" onclick="showTrackOrder()">Acompanhe seu pedido</button>
+            <button type="button" class="btn btn-primary w-100 mt-3" onclick="showTrackOrder()">Acompanhe seu pedido</button>
         </div>
 
-        <div id="track-order-section" style="display: none;">
-            <button class="back-btn" onclick="goBack()">&lt;</button>
-            <h2>Pedido nº 00000</h2>
-            <img src="laundry-image.jpg" alt="Imagem da Lavanderia">
-            <h3>Lavanderia Fast Time 24h</h3>
+        <div id="track-order-section" class="card mx-auto p-4 shadow-sm d-none">
+            <button class="back-btn btn btn-link" onclick="goBack()">&lt; Voltar</button>
+            <h2 class="text-primary mb-3">Pedido nº 00000</h2>
+            <img src="imagens/laundry-image.jpg" alt="Imagem da Lavanderia" class="img-fluid mb-3">
+            <h3 class="text-secondary">Lavanderia Fast Time 24h</h3>
             <p>Localização:</p>
             <p>SEPN 123, Qd 1, Brasília - DF</p>
-            <div class="order-actions">
-                <button class="contact-btn">
-                    <img src="phone-icon.png" alt="Ícone de Telefone"> Contato
-                </button>
-                <button class="details-btn">
-                    <img src="list-icon.png" alt="Ícone de Lista"> Detalhes
-                </button>
-                <button class="receipt-btn">
-                    <img src="receipt-icon.png" alt="Ícone de Recibo"> Extrato
-                </button>
+            <div class="order-actions d-flex justify-content-around mt-3">
+                <button type="button" class="btn btn-outline-secondary" onclick="goBack()">Voltar</button>
+                <button type="button" class="btn btn-primary">Finalizar</button>
             </div>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
