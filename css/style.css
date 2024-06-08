@@ -17,6 +17,8 @@ body {
     text-align: center;
     margin-top: 15px;
     color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 .signup-link:hover {
@@ -75,4 +77,24 @@ body {
 
 .order-actions .btn {
     min-width: 120px;
+}
+
+.section-title {
+    background-color: #e9ecef;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.google-login,
+.apple-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.google-login img,
+.apple-login img {
+    width: 24px;
+    height: 24px;
 }
